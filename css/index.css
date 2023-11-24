@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    background-color: #00CFFD;
+}
+header nav{
+    display: flex;
+    justify-content: left;
+    margin: 0px;
+    padding: 20px;
+}
+header nav a{
+    color: aliceblue;
+    font-size: 30px;
+    font-style: italic;
+    text-decoration: none;
+}
+.main {
+    background-color: #EBEBEB;
+    margin: 0px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 250px);
+    /* gap: 10px; */
+    grid-template-areas:
+      "area1 area1 . ."
+      "area2 area2 . ."
+      ". area3 area3 ."
+      ". . area4 area4";
+  }
+  .area {
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  .area h1{
+    color: black;
+    font-size: 70px;
+    font-style: italic;
+  }
+  .area img{
+    border-radius: 10px;
+  }
+  .area .link{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .area .link p{
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+  }
+  .area .link a{
+    text-decoration: none;
+    padding: 10px;
+    font-size: 30px;
+    color: black;
+  }
+  
+  #area1 {
+    background-color: transparent;
+    grid-area: area1;
+    box-shadow: 0 0px 0px white;
+  }
+  #area2 {
+    background-color: white;
+    grid-area: area2;
+  }
+  #area2:hover{
+    box-shadow: 0 8px 16px #00D0FF;
+  }
+  #area3 {
+    background-color: white;
+    grid-area: area3;
+  }
+  #area3:hover{
+    box-shadow: 0 8px 16px #00FF41;
+  }
+  #area4 {
+    background-color: white;
+    grid-area: area4;
+  }
+  #area4:hover{
+    box-shadow: 0 8px 16px #C55AFF;
+  }
+  /* Tamaño tablet*/
+  @media (max-width: 1072px) {
+    .main {
+      border: 1px solid rgb(0, 0, 0);
+      margin: 5px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(4, 250px);
+      /* gap: 10px; */
+      grid-template-areas:
+        "area1 area1"
+        "area2 area2"
+        "area3 area3"
+        "area4 area4";
+    }
+  }
+  /* Tamaño celular */
+  @media (max-width: 517px) {
+    .main {
+      border: 1px solid black;
+      margin: 5px;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(4, 200px);
+      /* gap: 10px; */
+      grid-template-areas:
+        "area1"
+        "area2"
+        "area3"
+        "area4";
+    }
+  }
+.area img{
+    height: 100%;
+}
+footer{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: #C760FF;
+}
+footer .copy{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 15px;
+}
+footer .redes{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 15px;
+}
+footer .redes a{
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+}
